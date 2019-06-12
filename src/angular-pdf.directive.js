@@ -178,7 +178,7 @@ export const NgPdf = ($window, $document, $log) => {
           pdfLoaderTask.then(
             _pdfDoc => {
               if (angular.isFunction(scope.onLoad)) {
-                scope.onLoad();
+                scope.onLoad(_pdfDoc);
               }
 
               pdfDoc = _pdfDoc;
