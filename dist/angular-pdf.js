@@ -268,7 +268,7 @@ var NgPdf = exports.NgPdf = ["$window", "$document", "$log", function NgPdf($win
           pdfLoaderTask.onPassword = scope.onPassword;
           pdfLoaderTask.then(function (_pdfDoc) {
             if (angular.isFunction(scope.onLoad)) {
-              scope.onLoad();
+              scope.onLoad(_pdfDoc);
             }
 
             pdfDoc = _pdfDoc;
